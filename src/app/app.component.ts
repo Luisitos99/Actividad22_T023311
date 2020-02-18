@@ -6,5 +6,38 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'CashTracking';
+  Saldo = 0;
+
+  Transacciones = [
+  ]
+
+  dep(cant:HTMLInputElement){
+    if(cant.value===""){
+      alert("El cuadro de texto esta vacío")
+    }
+    else{
+    if (cant.valueAsNumber>=0){
+      this.Saldo=this.Saldo+cant.valueAsNumber;
+      this.Transacciones.unshift(cant.valueAsNumber)
+    }
+    else{
+      alert("No se aceptan valores negativos")
+    }
+  }
+  }
+
+  ret(cant:HTMLInputElement){
+    if(cant.value===""){
+      alert("El cuadro de texto esta vacío")
+    }
+    else{
+    if (cant.valueAsNumber>=0){
+      this.Saldo=this.Saldo+cant.valueAsNumber;
+      this.Transacciones.unshift(cant.valueAsNumber)
+    }
+    else{
+      alert("No se aceptan valores negativos")
+    }
+  }
+  }
 }
