@@ -32,8 +32,8 @@ export class AppComponent {
     }
     else{
     if (cant.valueAsNumber>=0){
-      this.Saldo=this.Saldo+cant.valueAsNumber;
-      this.Transacciones.unshift(cant.valueAsNumber)
+      this.Saldo=this.Saldo-cant.valueAsNumber;
+      this.Transacciones.unshift(-cant.valueAsNumber)
     }
     else{
       alert("No se aceptan valores negativos")
